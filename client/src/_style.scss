@@ -1,0 +1,41 @@
+// Typography
+$appFont: "PT Sans Caption", sans-serif;
+$mainColor: #222222;
+$secondColor: #777777;
+$headerColor: #000000;
+$blueLink: #385cde;
+
+.logo {
+  color: $headerColor;
+  font-size: 40px;
+  letter-spacing: -0.1em;
+}
+
+h1 {
+  color: $headerColor;
+  font-weight: bold;
+  font-size: 45px;
+}
+h2 {
+  color: $headerColor;
+}
+
+h4 {
+  color: $secondColor;
+}
+
+button {
+  background-color: #506d57;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 100;
+  border: none;
+  font-family: $appFont;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
+}
+
+body {
+  font-family: $appFont;
+}

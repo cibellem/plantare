@@ -1,0 +1,17 @@
+@import "../../../style";
+
+//logo
+
+.logo-img {
+  height: auto;
+  max-width: 30%;
+}
+.nav-link {
+  color: $secondColor;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.nav-link:hover {
+  color: $headerColor !important;
+}

@@ -1,12 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./_style.scss";
+import Home from "./views/home/home";
 
 function App() {
   return (
-    <div className="App">
-    <h1>Hi!</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </Router>
   );
 }
 

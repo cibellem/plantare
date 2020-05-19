@@ -5,8 +5,10 @@ const path = require("path");
 const app = express();
 //Sets an initial PORT that will listen for requests from the client side
 const PORT = process.env.PORT || 3001;
+//Our models
+const db = require("./models");
 
-//Middlewares = function that will be executed in between request and response
+//Middlewares = function that will be executed in between request and responses
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -24,7 +26,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-//Starts the server
-app.listen(PORT, () => {
-  console.log(`Server listening on port http://localhost:${PORT}`);
+//Starts the server and syncing models
+db.sequelize.sync().then(function () {
+  app.listen(PORT, () => {
+    console.log(`Server listening on port http://localhost:${PORT}`);
+  });
 });
