@@ -14,7 +14,7 @@ function PlantCard(props) {
       </div>
       <div className="row text-center plant-card  ">
         {props.products.map((item) => (
-          <div className="col-4 ">
+          <div className="col-md-4 col-sm-12">
             <div className="card mb-2">
               <img
                 key={item._id}
