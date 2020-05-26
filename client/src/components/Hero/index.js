@@ -10,8 +10,9 @@ function Hero() {
             A piece of nature delivered to your hands.
           </h1>
           <h4 className="hero-text">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor{" "}
+            Our plants are cared with the richest and healthiest soil. They have
+            a special care regimen and they are treated as if they were our
+            child!
           </h4>
           <div className="">
             <button className="button">Start shopping</button>

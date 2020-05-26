@@ -12,7 +12,8 @@ function Home() {
       setProducts(res.data);
     });
   }, []);
-  console.log(products);
+
+ 
 
   return (
     <>

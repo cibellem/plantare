@@ -1,8 +1,19 @@
 import React from "react";
 import "./assets/style.scss";
+import { Link } from "react-router-dom";
+import API from "../../Utils/API";
 function PlantCard(props) {
-  console.log(props.products);
-
+  function addToCart(item) {
+    const productData = {
+      name: item.name,
+      price: item.price,
+      image: item.image,
+    };
+    
+    API.addToCart(productData).then((res) => {
+      console.log(res);
+    });
+  }
   return (
     <div className="container plant-card-container ">
       <div className="row text-center">
@@ -25,7 +36,9 @@ function PlantCard(props) {
               <p>{item.name}</p>
               <div className="row text-center">
                 <div className="col">
-                  <a href="">Add to cart</a>
+                  <Link to="" onClick={() => addToCart(item)}>
+                    Add to cart
+                  </Link>
                 </div>
                 <div className="col">
                   <p>${item.price}</p>

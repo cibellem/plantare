@@ -1,0 +1,20 @@
+@import "../../../style";
+html,
+body {
+  height: 100%;
+}
+.container-login {
+ 
+ 
+  //   box-shadow: 0px 4px 7px rgba(85, 83, 83, 0.726);
+
+  input {
+    border-radius: 30px;
+    background-color: rgba(242, 241, 241, 0.5);
+  }
+}
+
+
+.button-login {
+  margin-top: 20px;
+}

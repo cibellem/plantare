@@ -23,7 +23,7 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="">
+            <Link className="nav-link" to="/login">
               Sign in
             </Link>
           </li>
