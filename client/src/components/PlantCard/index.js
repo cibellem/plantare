@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./assets/style.scss";
 import { Link } from "react-router-dom";
 import API from "../../Utils/API";
 function PlantCard(props) {
+  const [cart, setCart] = useState("");
+  const [quantity, setQty] = useState(0);
+
   function addToCart(item) {
     const productData = {
       name: item.name,
       price: item.price,
       image: item.image,
     };
-    
+
     API.addToCart(productData).then((res) => {
-      console.log(res);
+      setCart(res.data);
+      setQty(quantity + 1);
     });
   }
+
   return (
     <div className="container plant-card-container ">
       <div className="row text-center">

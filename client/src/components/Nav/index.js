@@ -28,9 +28,9 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link className="nav-link " to="">
+            <Link className="nav-link " to="/cart">
               {" "}
-              <i class="fas fa-shopping-bag mx-3"></i>My cart
+              <i class="fas fa-shopping-bag mx-3"></i>My cart(3)
             </Link>
           </li>
         </ul>
