@@ -1,0 +1,25 @@
+@import "../../../style";
+// html,
+// body {
+//   height: 100%;
+// }
+.container-login {
+  //   box-shadow: 0px 4px 7px rgba(85, 83, 83, 0.726);
+
+  .inputs {
+    border-radius: 30px;
+    background-color: rgba(242, 241, 241, 0.5) !important;
+  }
+}
+
+.button-login {
+  background-color: #506d57;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 100;
+  border: none;
+  font-family: $appFont;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
+}

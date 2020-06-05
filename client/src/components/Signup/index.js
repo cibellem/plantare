@@ -1,12 +1,12 @@
 import "./assets/style.scss";
 import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import React, { useCallback } from "react";
+import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 import app from "../../firebase";
-import { AuthContext } from "../../Auth";
 
-const LoginComponent = ({ history }) => {
+const SignupComponent = ({ history }) => {
   //history it's the browser history
   const handleSubmit = useCallback(
     async (event) => {
@@ -15,7 +15,7 @@ const LoginComponent = ({ history }) => {
       try {
         await app
           .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+          .createUserWithEmailAndPassword(email.value, password.value);
         history.push("/");
       } catch (error) {
         alert(error);
@@ -24,11 +24,7 @@ const LoginComponent = ({ history }) => {
     [history]
   );
 
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
+  //this is
 
   const LoginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Email is required"),
@@ -41,7 +37,8 @@ const LoginComponent = ({ history }) => {
     <div className="container-login container">
       <div className="row mb-5">
         <div className="col-lg-12 text-center">
-          <h1 className="mt-5">Login in</h1>
+          <h1 className="mt-5">Sign in</h1>
+          <Link to="/login">Already have an account?</Link>
         </div>
       </div>
       <div className="row">
@@ -78,7 +75,7 @@ const LoginComponent = ({ history }) => {
                 </div>
 
                 <button className="button-login" type="submit">
-                  Login
+                  Submit
                 </button>
               </Form>
             )}
@@ -89,4 +86,4 @@ const LoginComponent = ({ history }) => {
   );
 };
 
-export default withRouter(LoginComponent);
+export default withRouter(SignupComponent);

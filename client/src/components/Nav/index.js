@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./assets/style.scss";
+import { AuthContext } from "../../Auth";
+import app from "../../firebase";
 
 function Nav() {
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
   return (
     <nav className=" container navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -17,16 +21,21 @@ function Nav() {
           </a>
         </div>
         <ul className="nav navbar-nav navbar-right">
-          <li>
-            <Link className="nav-link" to="">
-              Sign up
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/login">
+          {!currentUser ? (
+            <Link className="nav-link" to="/signup">
               Sign in
             </Link>
-          </li>
+          ) : (
+            <Link
+              className="nav-link"
+              to=""
+              onClick={() => app.auth().signOut()}
+            >
+              Sign out
+            </Link>
+          )}
+          <li></li>
+          <li></li>
           <li>
             <Link className="nav-link " to="/cart">
               {" "}

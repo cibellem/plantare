@@ -1,0 +1,19 @@
+@import "../../../style";
+
+.container-login-parent {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  //   background-color: rgba(80, 109, 87, 0.25);
+
+  height: 100vh;
+}
+
+.test {
+  background-color: burlywood;
+}
+
+.logo-img-login {
+  height: auto;
+  width: 70%;
+}
