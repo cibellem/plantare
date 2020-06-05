@@ -10,16 +10,15 @@ function Hero() {
             A piece of nature delivered to your hands.
           </h1>
           <h4 className="hero-text">
-            Our plants are cared with the richest and healthiest soil. They have
-            a special care regimen and they are treated as if they were our
-            child!
+            Our plants have a special care regimen and they are cared with the
+            richest and healthiest soils.
           </h4>
           <div className="">
             <button className="button">Start shopping</button>
           </div>
         </div>
 
-        <div className="col-md-6  col-sm-12 text-center center-align">
+        <div className="col-md-6 d-none d-sm-block d-md-block  col-sm-12 text-center center-align">
           {" "}
           <img
             className="hero-img img-responsive"

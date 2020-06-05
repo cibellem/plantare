@@ -15,16 +15,30 @@
     font-size: 18px;
   }
 }
+
+.add-to-cart-btn {
+  border: 1.5px solid #3fa24f;
+  background-color: inherit;
+  color: #3fa24f;
+  width: auto;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #98d9a3;
+  color: white;
+}
 .plant-card {
-  justify-content: space-evenly;
+  justify-content: space-between;
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .card {
-  border: #b2b0b0 1px solid !important;
   height: 24rem;
-  width: 18rem;
+}
+
+.plant-img {
+  height: 150px;
 }
 
 .bg-balls {

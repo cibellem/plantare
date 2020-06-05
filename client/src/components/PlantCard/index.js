@@ -28,33 +28,37 @@ function PlantCard(props) {
           <h4> Same Day delivery for Phoenix</h4>
         </div>
       </div>
-      <div className="row text-center plant-card  ">
+      <div className="row">
         {props.products.map((item) => (
-          <div className="col-md-4 col-sm-12">
-            <div className="card mb-2">
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div class="card   mb-2 " style={{ width: "18rem" }}>
               <img
                 key={item._id}
-                className="img-responsive"
+                className="card-img-top plant-img"
                 src={item.image}
                 alt="Plant Image"
               />
-              <p>{item.name}</p>
-              <div className="row text-center">
-                <div className="col">
-                  <Link to="" onClick={() => addToCart(item)}>
+              <div class="card-body   ">
+                <h5 class="card-title">{item.name}</h5>
+                <div className="plant-card">
+                  <button
+                    className="add-to-cart-btn btn card-link"
+                    onClick={() => addToCart(item)}
+                  >
+                    {" "}
                     Add to cart
-                  </Link>
-                </div>
-                <div className="col">
-                  <p>${item.price}</p>
+                  </button>
+
+                  <p className="card-link">${item.price}</p>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-      <div className="bg-balls">
-        <img src={require("../../images/balls.png")} alt="" />
+
+        <div className="bg-balls">
+          <img src={require("../../images/balls.png")} alt="" />
+        </div>
       </div>
     </div>
   );
