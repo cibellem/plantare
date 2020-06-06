@@ -1,7 +1,14 @@
 import React from "react";
+import OrderCard from "../../components/OrderCard";
+import PlantCard from "../../components/PlantCard";
 
 function Checkout() {
-  return <div>Hi</div>;
+  return (
+    <>
+      <OrderCard />
+      <PlantCard />
+    </>
+  );
 }
 
 export default Checkout;
