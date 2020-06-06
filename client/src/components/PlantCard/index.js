@@ -3,6 +3,7 @@ import "./assets/style.scss";
 import { Link } from "react-router-dom";
 import API from "../../Utils/API";
 function PlantCard(props) {
+  console.log(props);
   const [cart, setCart] = useState("");
   const [quantity, setQty] = useState(0);
 
