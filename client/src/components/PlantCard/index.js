@@ -32,7 +32,7 @@ function PlantCard(props) {
       <div className="row">
         {props.products.map((item) => (
           <div className="col-lg-4 col-md-6 col-sm-12">
-            <div class="card   mb-2 " style={{ width: "18rem" }}>
+            <div class="card plant-card   mb-2 " style={{ width: "18rem" }}>
               <img
                 key={item._id}
                 className="card-img-top plant-img"

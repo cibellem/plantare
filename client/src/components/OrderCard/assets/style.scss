@@ -2,16 +2,25 @@
 
 .border {
   border-bottom: 3px solid black !important;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .place-order-btn {
   background-color: #2f9f6a;
   color: white;
-  font-size: px;
 }
 
+.place-order-btn:hover {
+  background-color: #086f3d;
+  color: white;
+}
 .order-card {
+  h6 {
+    font-weight: bold;
+  }
   p {
     color: #777777;
   }
+  padding: 10px;
 }

@@ -8,17 +8,17 @@ function Nav() {
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
   return (
-    <nav className=" container navbar navbar-expand-lg">
+    <nav className="  navbar navbar-expand-lg">
       <div className="container-fluid">
-        <div className="navbar-header ml-0">
-          <a className="navbar-brand logo" href="#">
+        <div className="navbar-header ">
+          <Link className="navbar-brand logo" to={"/"}>
             <img
               className="logo-img img-responsive"
               src={require("./assets/images/logo.svg")}
               alt="App Logo"
             />
             Plantare
-          </a>
+          </Link>
         </div>
         <ul className="nav navbar-nav navbar-right">
           {!currentUser ? (
