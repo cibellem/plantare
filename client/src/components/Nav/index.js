@@ -4,12 +4,13 @@ import "./assets/style.scss";
 import { AuthContext } from "../../Auth";
 import app from "../../firebase";
 
-function Nav() {
+function Nav(props) {
   const { currentUser } = useContext(AuthContext);
+  console.log(props);
   console.log(currentUser);
   return (
     <nav className="  navbar navbar-expand-lg">
-      <div className="container-fluid">
+      <div className="container">
         <div className="navbar-header ">
           <Link className="navbar-brand logo" to={"/"}>
             <img
@@ -39,7 +40,7 @@ function Nav() {
           <li>
             <Link className="nav-link " to="/cart">
               {" "}
-              <i class="fas fa-shopping-bag mx-3"></i>My cart(3)
+              <i class="fas fa-shopping-bag mx-3"></i>My cart {props.count}
             </Link>
           </li>
         </ul>

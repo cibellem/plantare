@@ -31,4 +31,9 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  count: function (req, res) {
+    db.Cart.count(req, res)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err + "test"));
+  },
 };

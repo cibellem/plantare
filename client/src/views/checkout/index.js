@@ -7,16 +7,19 @@ import "./assets/style.scss";
 
 function Checkout() {
   const [items, setItems] = useState([]);
+  const [count, setCount] = useState();
 
   useEffect(() => {
     axios.get("/api/cart").then((res) => {
+      let data = res.data;
+      setCount(data.length);
       setItems(res.data);
     });
   }, []);
   return (
     <>
       {" "}
-      <Nav />
+      <Nav count={count} />
       <div className=" container item-container ">
         <div className="row">
           <h3>My cart</h3>

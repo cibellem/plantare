@@ -3,7 +3,7 @@ import "./assets/style.scss";
 
 function Hero() {
   return (
-    <div className="container hero-container">
+    <div className="container pt-4 hero-container">
       <div className="row align-items-center ">
         <div className=" d-flex flex-column  justify-content-around col-md-6 col-sm-12 ">
           <h1 className=" hero-head">

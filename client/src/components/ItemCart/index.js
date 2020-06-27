@@ -19,9 +19,9 @@ function ItemCart(props) {
   return (
     <div className="item-cart">
       {props.items.map((item) => (
-        <div className="container card-item card">
-          <div className="row">
-            <div className="col-4">
+        <div className="container card-item-checkout card-item card">
+          <div className="row p-3">
+            <div className="col-4 ">
               {" "}
               <img
                 key={item._id}

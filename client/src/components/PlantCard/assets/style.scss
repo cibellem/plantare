@@ -5,22 +5,25 @@
   justify-content: center;
   text-align: center;
   img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
     margin: 0 auto;
   }
   p {
     font-weight: bold;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .add-to-cart-btn {
-  border: 1.5px solid #3fa24f;
+  border: 1.3px solid #2c6e379d;
   background-color: inherit;
   color: #3fa24f;
   width: auto;
+  border-radius: 15px;
+  font-size: 14px;
+  box-shadow: 0px 2px 2px rgba(128, 128, 128, 0.226);
 }
 
 .add-to-cart-btn:hover {
@@ -32,17 +35,25 @@
   display: flex;
   align-items: baseline;
 }
-
-.plant-card {
-  height: 24rem;
+.card-body {
+  margin: 0 auto;
+  padding: 0;
+  max-height: 80px;
+  max-width: 600px;
+}
+.card-item-description {
+  padding: 30px;
+}
+.card {
+  border: 6px solid rgba(95, 51, 15, 0.26);
+  background-color: white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.144);
+  border-radius: 20px;
+}
+.card-item-checkout {
+  padding: 5px;
 }
 
 .plant-img {
   height: 150px;
-}
-
-.bg-balls {
-  position: absolute;
-  margin-left: -450px;
-  opacity: 0.9;
 }
