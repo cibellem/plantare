@@ -1,9 +1,16 @@
 import React from "react";
 import "./assets/style.scss";
+import API from "../../Utils/API";
 
 function ItemCart(props) {
-  function deleteItem() {
-    console.log("click btn working");
+  function deleteItem(e) {
+    let id = e.target.id;
+
+    API.removeFromCart(id)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch();
   }
 
   function addtoWishList() {
@@ -43,7 +50,7 @@ function ItemCart(props) {
               </div>
               <div className="row remove-row">
                 <div className="col  ">
-                  <p className="remove" onClick={deleteItem}>
+                  <p id={item._id} className="remove" onClick={deleteItem}>
                     Remove
                   </p>
                 </div>

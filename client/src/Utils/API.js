@@ -7,4 +7,7 @@ export default {
   addToCart: function (productData) {
     return axios.post("/api/cart", productData);
   },
+  removeFromCart: function (id) {
+    return axios.delete(`/api/cart/${id}`);
+  },
 };
