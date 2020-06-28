@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./assets/style.scss";
-import { Link } from "react-router-dom";
 import API from "../../Utils/API";
+import { CartContext } from "../../CartContex";
+
 function PlantCard(props) {
-  console.log(props);
-  const [cart, setCart] = useState("");
+  const [cart, setCart] = useContext(CartContext);
   const [quantity, setQty] = useState(0);
+  const [added, setAdd] = useState(false);
 
   function addToCart(item) {
     const productData = {
       name: item.name,
       price: item.price,
       image: item.image,
+      id: item._id,
     };
 
+    setCart((currentState) => [...currentState, productData]);
+    //...the spread oprator makes a copy of the array
+    console.log(cart);
+
     API.addToCart(productData).then((res) => {
-      setCart(res.data);
       setQty(quantity + 1);
     });
   }
@@ -36,7 +41,7 @@ function PlantCard(props) {
         "
           >
             <div
-              class="card plant-card card-item-description  mb-2 "
+              class="card card-item-description  mb-2 "
               style={{ width: "16rem" }}
             >
               <img
@@ -45,19 +50,19 @@ function PlantCard(props) {
                 src={item.image}
                 alt="Plant Image"
               />
-              <div class="card-body py-2 pb-1 ">
-                <h6 class="card-title">{item.name}</h6>
-                <div className="plant-card py-2">
+              <div class="card-body  ">
+                <div className="plant-card ">
+                  <h6 class="card-title">{item.name}</h6>
+                  <p className="card-link">${item.price}</p>
+
                   <button
                     className="add-to-cart-btn btn card-link"
                     onClick={() => addToCart(item)}
                   >
                     {" "}
-                    <i class="fas fa-plus-circle pr-3"></i>
-                    Add to cart
+                    <i class="fas fa-check-circle pr-3"></i>
+                    Add to Cart
                   </button>
-
-                  <p className="card-link">${item.price}</p>
                 </div>
               </div>
             </div>

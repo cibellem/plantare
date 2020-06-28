@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "./assets/style.scss";
 import API from "../../Utils/API";
+import { CartContext } from "../../CartContex";
 
 function ItemCart(props) {
+  const [cart, setCart] = useContext(CartContext);
+
   function deleteItem(e) {
+    console.log(cart, "cart");
+
     let id = e.target.id;
+    cart.splice(id, 1);
+    setCart([...cart]);
+
+    console.log(cart);
+    //...the spread oprator makes a copy of the array
 
     API.removeFromCart(id)
-      .then((res) => {
-        
-      })
+      .then((res) => {})
       .catch();
   }
 

@@ -19,7 +19,7 @@ function Checkout() {
   return (
     <>
       {" "}
-      <Nav count={count} />
+      <Nav />
       <div className=" container item-container ">
         <div className="row">
           <h3>My cart</h3>

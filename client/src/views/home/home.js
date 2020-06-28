@@ -13,11 +13,9 @@ function Home() {
     });
   }, []);
 
- 
-
   return (
     <>
-      <Nav />
+      <Nav  />
       <Hero />
       <PlantCard products={products} />
     </>

@@ -18,7 +18,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="col-md-6 d-none d-sm-block d-md-block  col-sm-12 text-center center-align">
+        <div className="col-md-6 d-none d-sm-block d-md-block  col-sm-12 text-center baseline-align">
           {" "}
           <img
             className="hero-img img-responsive"

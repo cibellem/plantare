@@ -14,14 +14,17 @@ function OrderCard() {
       let price = data.forEach((item) => {
         prices.push(item.price);
       });
-
-      let reducer = (a, b) => a + b;
-      setTotal(prices.reduce(reducer));
+      if (prices.length === 0) {
+        console.log("empty cart");
+      } else {
+        let reducer = (a, b) => a + b;
+        setTotal(prices.reduce(reducer));
+      }
     });
   }, []);
   return (
     <div className="card ml-auto order-card" style={{ width: "20rem" }}>
-      <div class="card-body">
+      <div class="">
         <h6 class="card-title">Price Details</h6>
         <p class="card-text">Card Total: $</p>
         <p class="card-text">Estimated Tax: $</p>
