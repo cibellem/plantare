@@ -66,9 +66,10 @@ Product.create(
       "https://res.cloudinary.com/dhmh846wn/image/upload/v1590016444/snake_plant.png",
   },
 
-  function (err) {
-    if (err) return handleError(err);
-  }
+  // Drop the 'plantare' collection from the current database
+  Product.db.dropCollection("products", function (err, result) {
+    console.log(result);
+  })
 );
 
 module.exports = Product;

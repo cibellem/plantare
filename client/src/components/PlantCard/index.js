@@ -29,15 +29,15 @@ function PlantCard(props) {
           <h4> Same Day delivery for Phoenix</h4>
         </div>
       </div>
-      <div className="row tex-center">
+      <div className="row text-center">
         {props.products.map((item) => (
           <div
-            className="col-lg-4 col-md-6 col-sm-12 p-4
+            className="col-lg-4 col-md-6 col-sm-12 pb-4
         "
           >
             <div
               class="card plant-card card-item-description  mb-2 "
-              style={{ width: "17rem" }}
+              style={{ width: "16rem" }}
             >
               <img
                 key={item._id}
@@ -45,9 +45,9 @@ function PlantCard(props) {
                 src={item.image}
                 alt="Plant Image"
               />
-              <div class="card-body py-2 pb-1   ">
+              <div class="card-body py-2 pb-1 ">
                 <h6 class="card-title">{item.name}</h6>
-                <div className="plant-card">
+                <div className="plant-card py-2">
                   <button
                     className="add-to-cart-btn btn card-link"
                     onClick={() => addToCart(item)}
@@ -63,8 +63,6 @@ function PlantCard(props) {
             </div>
           </div>
         ))}
-
-       
       </div>
     </div>
   );

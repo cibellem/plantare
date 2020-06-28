@@ -8,7 +8,7 @@ function ItemCart(props) {
 
     API.removeFromCart(id)
       .then((res) => {
-        console.log(res);
+        
       })
       .catch();
   }
