@@ -25,24 +25,32 @@ h2 {
 h4 {
   color: $secondColor;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 // body{
 //   background-color: #f3f2f0;
 // }
 
 .button {
-  background-color: #506d57;
+  background-color: #378549;
   color: #ffffff;
   font-size: 16px;
   font-weight: 100;
   border: none;
   font-family: $appFont;
-  padding: 20px;
+  padding: 15px;
+  text-align: center;
   width: 200px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
 }
-
+.button:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #376442;
+}
 body {
   font-family: $appFont;
 }

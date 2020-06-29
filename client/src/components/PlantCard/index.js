@@ -26,7 +26,7 @@ function PlantCard(props) {
   }
 
   return (
-    <div className="container plant-card-container ">
+    <div className="container plant-card-container " id="products">
       <div className="row text-center">
         <div className="col pt-5 mb-4">
           <h2>A variety you only find here</h2>

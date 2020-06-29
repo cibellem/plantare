@@ -1,38 +1,14 @@
 import React, { useState, useContext } from "react";
 import "./assets/style.scss";
-import API from "../../Utils/API";
-import { CartContext } from "../../CartContex";
+
 
 function ItemCart(props) {
-  const [cart, setCart] = useContext(CartContext);
-  const [hide, setHide] = useState(false);
-
-  function deleteItem(e) {
-    let id = e.target.id;
-    cart.splice(id, 1);
-    setCart([...cart]);
-    console.log(cart.indexOf(id));
-
-    API.removeFromCart(id)
-
-      .then((res) => {
-        // setHide(!hide);
-      })
-      .catch();
-  }
-
-  function addtoWishList() {
-    console.log("wishlist link working");
-  }
   return (
     <div className="item-cart">
       {props.items.map((item) => (
-        <div
-          className="container card-item-checkout card-item card"
-          // id={hide ? "hidden" : ""}
-        >
-          <div className="row p-3">
-            <div className="col-4 ">
+        <div className="container card-item-checkout card-item card">
+          <div className="row ">
+            <div className="col-4 p-3">
               {" "}
               <img
                 key={item._id}
@@ -61,12 +37,17 @@ function ItemCart(props) {
               </div>
               <div className="row remove-row">
                 <div className="col  ">
-                  <p id={item._id} className="remove" onClick={deleteItem}>
+                  <p
+                    id={item._id}
+                    value={item}
+                    className="remove"
+                    onClick={props.deleteItem}
+                  >
                     Remove
                   </p>
                 </div>
                 <div className="col  ">
-                  <p className="wishlist" onClick={addtoWishList}>
+                  <p className="wishlist" onClick={props.addtoWishList}>
                     Wishlist
                   </p>
                 </div>

@@ -14,7 +14,9 @@ function Hero() {
             richest and healthiest soils.
           </h4>
           <div className="">
-            <button className="button">Start shopping</button>
+            <a href="#products" className="button">
+              Start Shopping
+            </a>
           </div>
         </div>
 
