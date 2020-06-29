@@ -6,9 +6,11 @@ import "./_style.scss";
 import Home from "./views/home/home";
 import Checkout from "./views/checkout/index";
 import Signup from "./views/signup";
+
 import Login from "./views/login";
 
 function App() {
+  
   return (
     <AuthProvider>
       <Router>
