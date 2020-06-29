@@ -5,19 +5,19 @@ import { CartContext } from "../../CartContex";
 
 function ItemCart(props) {
   const [cart, setCart] = useContext(CartContext);
+  const [hide, setHide] = useState(false);
 
   function deleteItem(e) {
-    console.log(cart, "cart");
-
     let id = e.target.id;
     cart.splice(id, 1);
     setCart([...cart]);
-
-    console.log(cart);
-    //...the spread oprator makes a copy of the array
+    console.log(cart.indexOf(id));
 
     API.removeFromCart(id)
-      .then((res) => {})
+
+      .then((res) => {
+        // setHide(!hide);
+      })
       .catch();
   }
 
@@ -27,7 +27,10 @@ function ItemCart(props) {
   return (
     <div className="item-cart">
       {props.items.map((item) => (
-        <div className="container card-item-checkout card-item card">
+        <div
+          className="container card-item-checkout card-item card"
+          // id={hide ? "hidden" : ""}
+        >
           <div className="row p-3">
             <div className="col-4 ">
               {" "}

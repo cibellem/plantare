@@ -6,6 +6,8 @@ import Axios from "axios";
 
 function OrderCard() {
   const [total, setTotal] = useState();
+  const [tax, setTax] = useState();
+  const [totalPlusTax, setTotalPlusTax] = useState();
 
   useEffect(() => {
     Axios.get("api/cart").then(function (res) {
@@ -17,8 +19,15 @@ function OrderCard() {
       if (prices.length === 0) {
         console.log("empty cart");
       } else {
+        let tax = 5.6;
         let reducer = (a, b) => a + b;
         setTotal(prices.reduce(reducer));
+
+        let result = prices.reduce(reducer);
+        let taxResult = Math.round(result * tax) / 100;
+        setTax(taxResult);
+
+        setTotalPlusTax(taxResult + result);
       }
     });
   }, []);
@@ -26,11 +35,11 @@ function OrderCard() {
     <div className="card ml-auto order-card" style={{ width: "20rem" }}>
       <div class="">
         <h6 class="card-title">Price Details</h6>
-        <p class="card-text">Card Total: $</p>
-        <p class="card-text">Estimated Tax: $</p>
+        <p class="card-text">Card Total: ${total} </p>
+        <p class="card-text">Estimated Tax: ${tax}</p>
         <p class="card-text">Delivery: FREE</p>
         <div className="border"></div>
-        <p class="card-text">Order Total: ${total}</p>
+        <p class="card-text">Order Total: ${totalPlusTax}</p>
         <div>
           <button className="btn place-order-btn">Place Order</button>
         </div>
