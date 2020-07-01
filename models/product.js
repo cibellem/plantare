@@ -12,7 +12,7 @@ const Product = mongoose.model("Product", productSchema);
 
 Product.create(
   {
-    name: "Cactus Trio",
+    name: "Cactus",
     price: 15,
     image:
       "https://res.cloudinary.com/dhmh846wn/image/upload/v1590016443/cactus.png",

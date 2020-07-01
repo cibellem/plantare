@@ -11,4 +11,5 @@ router
   .put(cartController.update)
   .delete(cartController.remove);
 
+router.route("/count/:name").get(cartController.count);
 module.exports = router;

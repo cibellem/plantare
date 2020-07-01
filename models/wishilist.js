@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const cartSchema = new Schema({
+const whishSchema = new Schema({
   name: { type: String },
   price: { type: Number },
   image: { type: String },
 });
 
-const Cart = mongoose.model("Cart", cartSchema);
-module.exports = Cart;
-
+const Wish = mongoose.model("Wish", whishSchema);
+module.exports = Wish;
