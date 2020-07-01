@@ -26,48 +26,48 @@ function PlantCard(props) {
   }
 
   return (
-    <div className="container plant-card-container " id="products">
+    <div className=" container plant-card-container " id="products">
       <div className="row text-center">
-        <div className="col pt-5 mb-4">
+        <div className="col mb-3">
           <h2>A variety you only find here</h2>
           <h4>Prices as low as $10.</h4>
           <h4> Same Day delivery for Phoenix</h4>
         </div>
-      </div>
-      <div className="row text-center">
-        {props.products.map((item) => (
-          <div
-            className="col-lg-4 col-md-6 col-sm-12 pb-4
-        "
-          >
+        <div className="row">
+          {props.products.map((item) => (
             <div
-              class="card card-item-description  mb-2 "
-              style={{ width: "16rem" }}
+              className="col-lg-3 col-md-3 col-sm-12 pb-4 
+        "
             >
-              <img
-                key={item._id}
-                className="card-img-top plant-img"
-                src={item.image}
-                alt="Plant Image"
-              />
-              <div class="card-body  ">
-                <div className="plant-card ">
-                  <h6 class="card-title">{item.name}</h6>
-                  <p className="card-link">${item.price}</p>
+              <div
+                class="card card-item-description  mb-2 "
+                style={{ width: "16rem" }}
+              >
+                <img
+                  key={item._id}
+                  className="card-img-top plant-img"
+                  src={item.image}
+                  alt="Plant Image"
+                />
+                <div class="card-body  ">
+                  <div className="plant-card ">
+                    <h6 class="card-title">{item.name}</h6>
+                    <p className="card-link">${item.price}</p>
 
-                  <button
-                    className="add-to-cart-btn btn card-link"
-                    onClick={() => addToCart(item)}
-                  >
-                    {" "}
-                    <i class="fas fa-check-circle pr-3"></i>
-                    Add to Cart
-                  </button>
+                    <button
+                      className="add-to-cart-btn btn card-link"
+                      onClick={() => addToCart(item)}
+                    >
+                      {" "}
+                      <i class="fas fa-check-circle pr-3"></i>
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

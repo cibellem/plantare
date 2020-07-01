@@ -1,24 +1,32 @@
-# plantare
+# Plantare
 
+![img](plantare.png)
 
 Plantare is an Ecommerce plant store built with React, Node and MongoDB.
 
-In this application my main goal was to learn more about Unit Tests and to get exposure to Agile technologies such as Jira Software. 
+### Goals:
 
-For my Unit Tests I used Enzyme and Jasmine. Following some great resources online I shallowed tested my components to check if they were being rendered correctly. 
+-Get Exposure to Jira  <br>
+-Learn more about Unit Tests  <br>
+-Learn and Implement Stripe (in progress..) <br>
 
+Technologies Used : <br>
+-Figma <br>
+-React <br>
+-Node <br>
+-MongoDb <br>
+-Jira <br>
+-Enzyme <br>
+-Jasmine <br>
+-Stripe <br>
+-Firebase <br>
 
-To learn more about Jira I created an account 
+### MVP:
 
+-Users can sign in and out <br>
+-Users can add and remove item from a cart  <br>
+-Users can see the total price of their shopping cart  <br>
 
+### Link to the deployed application:
 
-Technologies Used  :
--Figma
--React
--Node
--MongoDb
--Jira
--Enzyme
--Jasmine
--Stripe
-
+Check it out!

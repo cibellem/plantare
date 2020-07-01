@@ -17,6 +17,19 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// //STRIPE
+// // Set your secret key. Remember to switch to your live secret key in production!
+// // See your keys here: https://dashboard.stripe.com/account/apikeys
+// const stripe = require('stripe')('sk_test_51Gym5nCvJ2UDgQ5Su60Sf9Y5OzTvTml1Dr7NRFe1jl0z6KZtczqR6GKdlPy7sMtnKJi5o1XqByIjQPMO3Ntm629T00SKNeIbii');
+
+// const paymentIntent = await stripe.paymentIntents.create({
+//   amount: 1099,
+//   currency: 'usd',
+//   // Verify your integration in this guide by including this parameter
+//   metadata: {integration_check: 'accept_a_payment'},
+// });
+
+
 
 //Api routes will go here
 app.use(routes);

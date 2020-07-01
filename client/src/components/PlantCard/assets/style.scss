@@ -1,11 +1,10 @@
 @import "../../../style";
 
 .plant-card-container {
-  height: 100vh;
-  justify-content: center;
-  text-align: center;
+
+
   img {
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
     margin: 0 auto;
   }
@@ -30,7 +29,6 @@
   background-color: #98d9a3;
   color: white;
 }
-
 
 .plant-card {
   justify-content: space-between;
@@ -64,6 +62,3 @@
   padding: 5px;
 }
 
-.plant-img {
-  height: 150px;
-}

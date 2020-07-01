@@ -44,6 +44,9 @@ function Checkout() {
         prices.push(item.price);
       });
       if (prices.length === 0) {
+        setTotal(0);
+        setTax(0);
+        setTotalPlusTax(0);
         return;
       } else {
         let tax = 5.6;
@@ -57,7 +60,7 @@ function Checkout() {
         setTotalPlusTax(taxResult + result);
       }
     });
-  }, [items]);
+  }, [cart]);
 
   return (
     <>
@@ -69,6 +72,7 @@ function Checkout() {
             <h3>My cart</h3>
           </div>
         </div>
+
         <div className="row item-cart-container ">
           <div className="col-md-6  col-sm-12">
             {" "}

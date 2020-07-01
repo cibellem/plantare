@@ -10,16 +10,8 @@ function Nav({ sticky }) {
   const { currentUser } = useContext(AuthContext);
   const [cart, setCart] = useContext(CartContext);
 
-
   return (
-    <nav
-    
-      className=
-       
-          
-           "navbar  navbar-expand-lg"
-      
-    >
+    <nav className="navbar  navbar-expand-lg">
       <div className="container">
         <div className="navbar-header ">
           <Link className="navbar-brand logo" to={"/"}>
@@ -49,7 +41,8 @@ function Nav({ sticky }) {
           <li>
             <Link className="nav-link " to="/cart">
               {" "}
-              <i class="fas fa-shopping-bag mx-3"></i>My cart {cart.length}
+              <i class="fas fa-shopping-bag pr-3"></i>My cart{" "}
+              <span className="cart-size">( {cart.length} )</span>
             </Link>
           </li>
         </ul>
