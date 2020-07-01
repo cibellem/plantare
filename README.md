@@ -2,8 +2,8 @@
 
 ![img](plantare.png)
 
-Plantare is an Faux Ecommerce plant store built with React, Node and MongoDB.
-As a plant lover and decided to play around in this side projcet to learn more about some technologies I have been interested. <br>
+Plantare is an Faux Ecommerce plant store built with React, Node and MongoDB. <br>
+I'm a plant lover and decided to build this aplication so I could get more exposure to some topics I have been interested to learn more about. <br>
 
 
 ### Goals:
