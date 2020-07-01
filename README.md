@@ -3,7 +3,7 @@
 ![img](plantare.png)
 
 Plantare is an Faux Ecommerce plant store built with React, Node and MongoDB.
-As a plant lover and decided to play around in this side projcet to learn more about some technologies I have been interested to learn more. <br>
+As a plant lover and decided to play around in this side projcet to learn more about some technologies I have been interested. <br>
 
 
 ### Goals:
@@ -32,3 +32,4 @@ Technologies Used : <br>
 ### Link to the deployed application:
 
 Check it out!
+https://plantare.herokuapp.com/
