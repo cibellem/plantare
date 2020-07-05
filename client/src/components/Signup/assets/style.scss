@@ -11,15 +11,20 @@
     background-color: rgba(242, 241, 241, 0.5) !important;
   }
 }
-
-.button-login {
-  background-color: #506d57;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 100;
-  border: none;
-  font-family: $appFont;
-  padding: 20px;
-  width: 200px;
-  box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
+.col-logo-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
 }
+// .button-login {
+//   background-color: #506d57;
+//   color: #ffffff;
+//   font-size: 16px;
+//   font-weight: 100;
+//   border: none;
+//   font-family: $appFont;
+
+//   width: 200px;
+//   box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
+// }

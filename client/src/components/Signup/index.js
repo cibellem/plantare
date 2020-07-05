@@ -37,7 +37,7 @@ const SignupComponent = ({ history }) => {
     <div className="container-login container">
       <div className="row mb-5">
         <div className="col-lg-12 text-center">
-          <h1 className="mt-5">Sign in</h1>
+          <h1 className="mt-5">Sign up</h1>
           <Link to="/login">Already have an account?</Link>
         </div>
       </div>
@@ -74,9 +74,11 @@ const SignupComponent = ({ history }) => {
                   ) : null}
                 </div>
 
-                <button className="button-login" type="submit">
-                  Submit
-                </button>
+                <div className="text-center">
+                  <button className="button-login " type="submit">
+                    Submit
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>

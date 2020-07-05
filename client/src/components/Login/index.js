@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
 import app from "../../firebase";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../Auth";
 
 const LoginComponent = ({ history }) => {
@@ -41,7 +42,8 @@ const LoginComponent = ({ history }) => {
     <div className="container-login container">
       <div className="row mb-5">
         <div className="col-lg-12 text-center">
-          <h1 className="mt-5">Login in</h1>
+          <h1 className="mt-5">Login</h1>
+          <Link to="/signup">Need an account?</Link>
         </div>
       </div>
       <div className="row">
@@ -77,9 +79,11 @@ const LoginComponent = ({ history }) => {
                   ) : null}
                 </div>
 
-                <button className="button-login" type="submit">
-                  Login
-                </button>
+                <div className="text-center">
+                  <button className="button-login " type="submit">
+                    Login
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>
