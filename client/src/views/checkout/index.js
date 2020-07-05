@@ -15,13 +15,11 @@ function Checkout() {
   const [totalPlusTax, setTotalPlusTax] = useState();
 
   function deleteItem(e, item) {
-    let id = e.target.id;
-    // console.log(cart);
-    // console.log(item);
+    let id = e.target.id;   
 
     API.removeFromCart(id)
-
       .then((res) => {
+        console.log(res);
         cart.splice(id, 1);
         setCart([...cart]);
       })
@@ -37,10 +35,13 @@ function Checkout() {
 
   useEffect(() => {
     let data = cart;
+    console.log(data, "cart when component mount");
     setItems(cart);
+    console.log(items);
     let prices = [];
     let price = data.forEach((item) => {
-      prices.push(item.price);
+      let qtyPrice = item.quantity * item.price;
+      prices.push(qtyPrice);
     });
     if (prices.length === 0) {
       setTotal(0);
@@ -50,6 +51,7 @@ function Checkout() {
     } else {
       let tax = 5.6;
       let reducer = (a, b) => a + b;
+
       setTotal(prices.reduce(reducer));
 
       let result = prices.reduce(reducer);

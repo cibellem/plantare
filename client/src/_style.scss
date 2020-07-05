@@ -1,4 +1,5 @@
 // Typography
+
 $appFont: "PT Sans Caption", sans-serif;
 $mainColor: #222222;
 $secondColor: #777777cc;
@@ -53,4 +54,16 @@ body {
 }
 body {
   font-family: $appFont;
+}
+
+.custom-search-select {
+  font-family: $appFont;
+  font-size: 12px;
+  border-radius: 5px;
+  color: silver;
+  margin-bottom: 15px;
+  padding: 3px 2px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid silver;
 }

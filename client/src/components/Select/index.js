@@ -1,26 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 
-function SelectQty(props) {
-  console.log(props);
-  let qty = 1;
-  return (
-    <div className="form-group">
-      <label for="sel1">Quantity:</label>
+class SelectQty extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  //On the change event for the select box pass the selected value back to the parent
+  //   handleChange = (event) => {
+  //     let selectedValue = event.target.value;
+  //     this.props.onSelectChange(selectedValue);
+  //   };
+
+  render() {
+    let arrayOfData = this.props.arrayOfData;
+    let options = arrayOfData.map((item, i) => (
+      <option key={item.id} value={item.qty}>
+        {item.qty}
+      </option>
+    ));
+
+    return (
       <select
-        name={props.name}
-        value={props.value}
-        onChange={props.handleChange}
-        className="form-control"
-        id="qty"
+        name="customSearch"
+        value={this.props.value}
+        className="custom-search-select"
+        onChange={this.props.handleChange}
       >
-        {Array.from(new Array(5), (v, i) => (
-          <option key={i} value={qty + i}>
-            {qty + i}
-          </option>
-        ))}
+        <option>Select Qty</option>
+        {options}
       </select>
-    </div>
-  );
+    );
+  }
 }
-
 export default SelectQty;

@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import "./assets/style.scss";
 
 function ItemCart(props) {
-  console.log(props, "items");
-
+  console.log(props);
   return (
     <div className="item-cart">
       {props.items.map((item) => (
@@ -47,11 +46,11 @@ function ItemCart(props) {
                     <i class="fas fa-minus-circle pr-2"></i> Remove
                   </p>
                 </div>
-                <div className="col  ">
+                {/* <div className="col  ">
                   <p className="wishlist" onClick={props.addtoWishList}>
                     <i class="fas fa-star pr-2"></i> Wishlist
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

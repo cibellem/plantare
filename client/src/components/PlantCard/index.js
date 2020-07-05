@@ -9,9 +9,33 @@ function PlantCard(props) {
   const [added, setAdd] = useState(false);
   const [selected, setSelect] = useState(0);
 
+  const arrayOfData = [
+    {
+      id: "1",
+      qty: 1,
+    },
+    {
+      id: "2",
+      qty: 2,
+    },
+    {
+      id: "3 ",
+      qty: 3,
+    },
+    {
+      id: "4 ",
+      qty: 4,
+    },
+    {
+      id: "5 ",
+      qty: 5,
+    },
+  ];
+
   function handleChange(event) {
     console.log(event);
     let selectedValue = event.target.value;
+
     setSelect(selectedValue);
   }
 
@@ -21,28 +45,24 @@ function PlantCard(props) {
       price: item.price,
       image: item.image,
       id: item._id,
-      quantity: selected,
+      quantity: parseInt(selected),
     };
-    API.addToCart(productData).then((res) => {
-      console.log(res);
-    });
-    setCart((currentState) => [...currentState, productData]);
-    // let result = cart.some((el) => productData.name === el.name);
-    // if (result) {
-    //   console.log(productData);
-    //   let id = productData.name;
-    //   let data = productData.quantity;
-    //   console.log(data);
 
-    //   API.updateCart(id, productData).then((res) => {
-    //     console.log(res);
-    //   });
-    //   setCart((currentState) => [...currentState, productData]);
-    // } else {
-    //   console.log(isNaN(productData.quantity));
-    //   productData.quantity = 1;
-    //   console.log(productData);
-    // }
+    let result = cart.some((el) => productData.name === el.name);
+    //quantity it's not updateing, why? at least it's not being duplicated.
+    if (result) {
+      console.log(productData);
+      let id = item._id;
+      let data = productData;
+
+      API.updateCart(id, data).then((res) => {
+        console.log(res);
+      });
+      // setCart([...cart, productData]);
+    } else {
+      API.addToCart(productData).then((res) => {});
+      setCart([...cart, productData]);
+    }
 
     //...the spread oprator makes a copy of the array
   }
@@ -75,19 +95,25 @@ function PlantCard(props) {
                   <div className="plant-card ">
                     <h6 class="card-title">{item.name}</h6>
                     <p className="card-link">${item.price}</p>
-                    <SelectQty
-                      handleChange={handleChange}
-                      selected={selected}
-                    />
-
-                    <button
-                      className="add-to-cart-btn btn card-link"
-                      onClick={() => addToCart(item)}
-                    >
-                      {" "}
-                      <i class="fas fa-check-circle pr-3"></i>
-                      Add to Cart
-                    </button>
+                    <div className="row">
+                      <div className="col">
+                        <SelectQty
+                          handleChange={handleChange}
+                          selected={selected}
+                          arrayOfData={arrayOfData}
+                        />
+                      </div>
+                      <div className="col">
+                        <button
+                          className="add-to-cart-btn btn card-link"
+                          onClick={() => addToCart(item)}
+                        >
+                          {" "}
+                          <i class="fas fa-plus pr-1"></i>
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

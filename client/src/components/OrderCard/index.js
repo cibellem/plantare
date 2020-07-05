@@ -5,7 +5,7 @@ import API from "../../Utils/API";
 import Axios from "axios";
 
 function OrderCard(props) {
-  console.log(props);
+ 
   return (
     <div className="p-4 card ml-auto order-card" style={{ width: "20rem" }}>
       <div class="">
