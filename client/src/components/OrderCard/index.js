@@ -7,7 +7,7 @@ import Axios from "axios";
 function OrderCard(props) {
   console.log(props);
   return (
-    <div className="card ml-auto order-card" style={{ width: "20rem" }}>
+    <div className="p-4 card ml-auto order-card" style={{ width: "20rem" }}>
       <div class="">
         <h6 class="card-title">Price Details</h6>
         <p class="card-text">Card Total: ${props.total} </p>

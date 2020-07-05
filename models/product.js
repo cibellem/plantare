@@ -5,6 +5,7 @@ const productSchema = new Schema({
   name: { type: String },
   price: { type: Number },
   image: { type: String },
+  quantity: { type: Number },
 });
 
 //Initial database structure. These are the products.
@@ -58,6 +59,7 @@ Product.create(
     price: 65,
     image:
       "https://res.cloudinary.com/dhmh846wn/image/upload/v1590016443/parlourpalm.png",
+    quantity: 1,
   },
   {
     name: "Snake Plant",

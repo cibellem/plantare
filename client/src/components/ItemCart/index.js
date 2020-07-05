@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import "./assets/style.scss";
 
 function ItemCart(props) {
+  console.log(props, "items");
+
   return (
     <div className="item-cart">
       {props.items.map((item) => (
@@ -31,7 +33,7 @@ function ItemCart(props) {
                 {" "}
                 <div className="col">
                   {" "}
-                  <p>Qty:</p>
+                  <p>Qty: {item.quantity}</p>
                 </div>
               </div>
               <div className="row remove-row">

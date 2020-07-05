@@ -12,6 +12,7 @@ export const CartProvider = (props) => {
   useEffect(() => {
     Axios.get("api/cart").then((res) => {
       setCart(res.data);
+      console.log(res);
     });
   }, []);
 

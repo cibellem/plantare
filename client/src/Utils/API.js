@@ -10,6 +10,9 @@ export default {
   removeFromCart: function (id) {
     return axios.delete(`/api/cart/${id}`);
   },
+  updateCart: function (id, data) {
+    return axios.put(`/api/cart/${id}`, data);
+  },
 
   //Stripe Test Api
 };

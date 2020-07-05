@@ -36,30 +36,28 @@ function Checkout() {
   }
 
   useEffect(() => {
-    axios.get("/api/cart").then((res) => {
-      let data = res.data;
-      setItems(res.data);
-      let prices = [];
-      let price = data.forEach((item) => {
-        prices.push(item.price);
-      });
-      if (prices.length === 0) {
-        setTotal(0);
-        setTax(0);
-        setTotalPlusTax(0);
-        return;
-      } else {
-        let tax = 5.6;
-        let reducer = (a, b) => a + b;
-        setTotal(prices.reduce(reducer));
-
-        let result = prices.reduce(reducer);
-        let taxResult = Math.round(result * tax) / 100;
-        setTax(taxResult);
-
-        setTotalPlusTax(taxResult + result);
-      }
+    let data = cart;
+    setItems(cart);
+    let prices = [];
+    let price = data.forEach((item) => {
+      prices.push(item.price);
     });
+    if (prices.length === 0) {
+      setTotal(0);
+      setTax(0);
+      setTotalPlusTax(0);
+      return;
+    } else {
+      let tax = 5.6;
+      let reducer = (a, b) => a + b;
+      setTotal(prices.reduce(reducer));
+
+      let result = prices.reduce(reducer);
+      let taxResult = Math.round(result * tax) / 100;
+      setTax(taxResult);
+
+      setTotalPlusTax(taxResult + result);
+    }
   }, [cart]);
 
   return (
