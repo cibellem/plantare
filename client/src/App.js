@@ -6,11 +6,9 @@ import "./_style.scss";
 import Home from "./views/home/home";
 import Checkout from "./views/checkout/index";
 import Signup from "./views/signup";
-
 import Login from "./views/login";
 
 function App() {
-  
   return (
     <AuthProvider>
       <Router>
@@ -18,7 +16,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/cart" component={Checkout} />
+          <PrivateRoute exact path="/cart" component={Checkout} />
         </Switch>
       </Router>
     </AuthProvider>
