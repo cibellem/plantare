@@ -47,21 +47,25 @@ function PlantCard(props) {
       id: item._id,
       quantity: parseInt(selected),
     };
+    if (productData.quantity != 0) {
+      let result = cart.some((el) => productData.name === el.name);
+      //quantity it's not updateing, why? at least it's not being duplicated.
+      if (result) {
+        console.log(productData, "produtct");
+        let id = item._id;
+        let data = productData;
 
-    let result = cart.some((el) => productData.name === el.name);
-    //quantity it's not updateing, why? at least it's not being duplicated.
-    if (result) {
-      console.log(productData);
-      let id = item._id;
-      let data = productData;
-
-      API.updateCart(id, data).then((res) => {
-        console.log(res);
-      });
-      // setCart([...cart, productData]);
-    } else {
-      API.addToCart(productData).then((res) => {});
-      setCart([...cart, productData]);
+        API.updateCart(id, data).then((res) => {
+          console.log(res);
+        });
+        // setCart([...cart, productData]);
+      } else {
+        API.addToCart(productData).then((res) => {});
+        setCart([...cart, productData]);
+      }
+    }
+    else {
+      return
     }
 
     //...the spread oprator makes a copy of the array

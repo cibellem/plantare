@@ -67,3 +67,9 @@ body {
   cursor: pointer;
   border: 1px solid silver;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
+}
