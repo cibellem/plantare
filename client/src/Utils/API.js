@@ -10,8 +10,12 @@ export default {
   removeFromCart: function (id) {
     return axios.delete(`/api/cart/${id}`);
   },
+
   updateCart: function (id, productData) {
     return axios.put(`/api/cart/${id}/`, productData);
+  },
+  getCart: function () {
+    return axios.get(`/api/cart/`);
   },
 
   //Stripe Test Api

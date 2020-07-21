@@ -20,15 +20,13 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.Cart.findOneAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    }).then((dbModel) => res.json(dbModel));
-
-    // res.status(200).json({ success: true });
+    db.Cart.findOneAndUpdate({ number: req.params.number }, req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
+
   remove: function (req, res) {
-    db.Cart.findById({ _id: req.params.id })
+    db.Cart.findByIdAndUpdate({ _id: req.params.id })
       .then((dbModel) => dbModel.remove())
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

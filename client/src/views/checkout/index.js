@@ -15,7 +15,7 @@ function Checkout() {
   const [totalPlusTax, setTotalPlusTax] = useState();
 
   function deleteItem(e, item) {
-    let id = e.target.id;   
+    let id = e.target.id;
 
     API.removeFromCart(id)
       .then((res) => {
@@ -25,17 +25,16 @@ function Checkout() {
       })
       .catch();
   }
-  function updateCart(e, item) {
-    console.log(e.target.value);
-  }
+  // function updateCart(e, item) {
+  //   console.log(e.target.value);
+  // }
 
-  function addtoWishList() {
-    console.log("wishlist link working");
-  }
+  // function addtoWishList() {
+  //   console.log("wishlist link working");
+  // }
 
   useEffect(() => {
     let data = cart;
-    console.log(data, "cart when component mount");
     setItems(cart);
     console.log(items);
     let prices = [];

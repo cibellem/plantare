@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import "./assets/style.scss";
 
 function ItemCart(props) {
-  console.log(props);
+  console.log(props, "props");
   return (
     <div className="item-cart">
       {props.items.map((item) => (

@@ -6,6 +6,7 @@ const cartSchema = new Schema({
   price: { type: Number },
   image: { type: String },
   quantity: { type: Number },
+  tagNumber: { type: Number },
 });
 
 const Cart = mongoose.model("Cart", cartSchema);
