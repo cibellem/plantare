@@ -55,15 +55,13 @@ function PlantCard(props) {
         let result = shoppingCart.some(
           (el) => productData.tagNumber === el.tagNumber
         );
-       
+
         //quantity it's not updating, why? at least it's not being duplicated.
-        if (result) {          
+        if (result) {
           let id = item.tagNumber;
           API.updateCart(id, productData).then((req, res) => {});
         } else {
           API.addToCart(productData).then((req, res) => {
-            console.log(productData);
-            
             setCart([...cart, productData]);
           });
         }
