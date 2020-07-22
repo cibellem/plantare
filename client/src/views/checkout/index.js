@@ -37,7 +37,7 @@ function Checkout() {
     let quantity = item.quantity;
 
     const productData = {
-      quantity: quantity + 1,
+      quantity: quantity - 1,
     };
     let id = item._id;
     API.updateCart(id, productData).then((res) => {
