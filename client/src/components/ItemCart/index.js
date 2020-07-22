@@ -20,9 +20,9 @@ function ItemCart(props) {
             </div>
             <div className="col-8 col-item-description ">
               <div className="row">
-                <div className="col">
+                <div className="col font-weight-bold">
                   {" "}
-                  <h6>{item.name}</h6>
+                  <h5>{item.name}</h5>
                 </div>
                 <div className="col">
                   {" "}
@@ -34,16 +34,17 @@ function ItemCart(props) {
                 <div className="col">
                   {" "}
                   <p>
-                    <span>
+                    <span className="font-weight-bold">Qty:</span>{" "}
+                    {item.quantity}{" "}
+                    <span className="pr-2">
                       <i
-                        class="fas fa-minus"
+                        class="fas fa-minus count "
                         onClick={(e) => props.removeOne((i, item))}
                       ></i>
                     </span>
-                    Qty: {item.quantity}{" "}
                     <span>
                       <i
-                        class="fas fa-plus"
+                        class="fas fa-plus count"
                         value={item}
                         onClick={(e) => props.addOne((i, item))}
                       ></i>

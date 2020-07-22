@@ -8,6 +8,17 @@
 .item-cart {
   display: flex;
   flex-direction: column;
+  .count {
+    font-size: 11px;
+    background-color: rgb(226, 222, 222);
+    padding: 5px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.801);
+    cursor: pointer;
+  }
+  .count:hover {
+    box-shadow: 0px 2px 3px rgba(19, 19, 19, 0.246);
+  }
 
   h6 {
     font-weight: bold;
