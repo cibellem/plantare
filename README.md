@@ -4,7 +4,13 @@
 
 ### Description:
 
-Full Stack Ecommerce plant store built with lots of love by someone that loves plants! <br>
+
+Plantare is a Full Stack Web Application built by someone that loves plants! In this faux eCommerce, I tried to mimic a real store so users can view and add items to their cart but to be able to checkout, they need to be authenticated. Thanks to React Router and Firebase that was very convenient to implement.<br>
+
+This was a solo project where I was responsible for each aspect of development including planning, design, and implementation. <br>
+Overall I am pretty happy with the outcome as I was able to learn and implement technologies I had been very interested to work with. <br>
+
+
 Front End : React/ Bootstrap/ <br>
 Back End : Mongo, Node and Firebase. <br>
 
@@ -13,7 +19,7 @@ Back End : Mongo, Node and Firebase. <br>
 ### Goals:
 
 -Get Exposure to Jira  <br>
--Learn more about Unit Tests  <br>
+-Learn and implement Unit Tests  <br>
 -Learn and Implement Stripe <br>
 
 #### Technologies Used : <br>
