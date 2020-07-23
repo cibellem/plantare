@@ -24,13 +24,14 @@ function OrderCard(props) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body className="text-center">
           {" "}
           <Elements stripe={promise}>
             <CheckoutForm price={price} />
           </Elements>
         </Modal.Body>
-        <Modal.Footer className="text-left ">
+        <Modal.Footer className="text-center ">
           <h6>Test Card Numbers</h6>
           <p>Number: 4242 4242 4242 4242</p>
           <p>CVC: Any 3 digits</p>
