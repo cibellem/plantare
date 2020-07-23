@@ -34,7 +34,7 @@ const stripe = require("stripe")(
 
 app.post("/create-payment-intent", async (req, res) => {
   const { price } = req.body;
-  console.log(price, "priceserver");
+ 
 
  
   // Create a PaymentIntent with the order amount and currency

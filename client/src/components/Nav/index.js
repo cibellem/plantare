@@ -41,7 +41,7 @@ function Nav({ sticky }) {
           <li>
             <Link className="nav-link " to="/cart">
               {" "}
-              <i class="fas fa-shopping-bag pr-3"></i>My cart{" "}
+              <i className="fas fa-shopping-bag pr-3"></i>My cart{" "}
               <span className="cart-size">( {cart.length} )</span>
             </Link>
           </li>
