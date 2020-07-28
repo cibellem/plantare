@@ -27,8 +27,9 @@ Back End : Mongo, Node and Firebase. <br>
 ### Achievements : 
 * Fully functioning Full Stack Web Application leveraged  with React, Node, and Mongo.
 * Used Firebase to handle user authentication, login/signup functionality.
-* Utilized TDD pattern using Jasmine and Enzyme to shallow test components.
-* Integrated Stripe API to handle checkout.
+* Developed following TDD patterns using Jasmine and Enzyme to shallow test components.
+* Successfully integrated Stripe's API into my application to handle checkouts.
+* Kept track of my tasks through Jira 
 
 
 ---------------------------------------------
