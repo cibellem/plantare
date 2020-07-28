@@ -1,4 +1,4 @@
-# Plantare
+# Plantare  :herb: :herb:
 
 ![img](plantare.png)
 
@@ -14,30 +14,45 @@ Overall I am pretty happy with the outcome as I was able to learn and implement 
 Front End : React/ Bootstrap/ <br>
 Back End : Mongo, Node and Firebase. <br>
 
-
+---------------------------------------------
 
 ### Goals:
 
--Get Exposure to Jira  <br>
--Learn and implement Unit Tests  <br>
--Learn and Implement Stripe <br>
+* Get Exposure to Jira  <br>
+* Learn and implement Unit Tests  <br>
+* Learn and Implement Stripe <br>
+
+---------------------------------------------
+
+### Achievements : 
+* Fully functioning Full Stack Web Application leveraged  with React, Node, and Mongo.
+* Used Firebase to handle user authentication, login/signup functionality.
+* Utilized TDD pattern using Jasmine and Enzyme to shallow test components.
+* Integrated Stripe API to handle checkout.
+
+
+---------------------------------------------
 
 #### Technologies Used : <br>
--Figma <br>
--React <br>
--Node <br>
--Mongodb <br>
--Jira <br>
--Enzyme <br>
--Jasmine <br>
--Stripe <br>
--Firebase <br>
+* Figma <br>
+* React <br>
+* Node <br>
+* Mongodb <br>
+* Jira <br>
+* Enzyme <br>
+* Jasmine <br>
+* Stripe <br>
+* Firebase <br>
+
+---------------------------------------------
 
 ### MVP:
 
 -Users can sign in and out <br>
 -Users can add and remove items to/from their carts  <br>
 -Users can see the total price of their shopping cart  <br>
+
+---------------------------------------------
 
 ### Link to the deployed application:
 
