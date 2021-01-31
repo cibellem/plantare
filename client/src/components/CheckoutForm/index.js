@@ -16,8 +16,6 @@ export default function CheckoutForm(props) {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-
-    console.log(props);
     let price = props.price;
     let cartItems = cart;
     const body = { price: price };

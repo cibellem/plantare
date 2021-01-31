@@ -35,8 +35,6 @@ const stripe = require("stripe")(
 app.post("/create-payment-intent", async (req, res) => {
   const { price } = req.body;
  
-
- 
   // Create a PaymentIntent with the order amount and currency
   const paymentIntent = await stripe.paymentIntents.create({
     amount: price * 100,
@@ -52,11 +50,12 @@ app.use(routes);
 //Api routes needs to be defined before this runs
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/plantaredb",
+  process.env.MONGODB_URI ||  "mongodb+srv://cibellem:root@cluster0.bnk4x.mongodb.net/plantare?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
+    useCreateIndex: true,
   },
   () => console.log("Connected to the the DB!")
 );
