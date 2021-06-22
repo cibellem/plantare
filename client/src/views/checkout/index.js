@@ -5,10 +5,8 @@ import axios from "axios";
 import Nav from "../../components/Nav";
 import "./assets/style.scss";
 import API from "../../Utils/API";
-import { CartContext } from "../../CartContex";
+import { CartContext } from "../../CartContext";
 import Axios from "axios";
-
-
 
 function Checkout() {
   const [items, setItems] = useState([]);

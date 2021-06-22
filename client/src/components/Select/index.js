@@ -5,12 +5,6 @@ class SelectQty extends Component {
     super(props);
   }
 
-  //On the change event for the select box pass the selected value back to the parent
-  //   handleChange = (event) => {
-  //     let selectedValue = event.target.value;
-  //     this.props.onSelectChange(selectedValue);
-  //   };
-
   render() {
     let arrayOfData = this.props.arrayOfData;
     let options = arrayOfData.map((item, i) => (

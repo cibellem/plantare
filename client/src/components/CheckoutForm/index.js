@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { CartContext } from "../../CartContex";
+import { CartContext } from "../../CartContext";
 import "./style.scss";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
@@ -19,7 +19,7 @@ export default function CheckoutForm(props) {
     let price = props.price;
     let cartItems = cart;
     const body = { price: price };
-    
+
     window
       .fetch("/create-payment-intent", {
         method: "POST",

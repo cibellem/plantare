@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./assets/style.scss";
 import { AuthContext } from "../../Auth";
-import { CartContext } from "../../CartContex";
+import { CartContext } from "../../CartContext";
 
 import app from "../../firebase";
 
