@@ -80,8 +80,8 @@ function PlantCard(props) {
     <div className="container" id="products">
       <div>
         <h2>A variety you only find here</h2>
-        <h4>Prices as low as $10.</h4>
-        <h4> Same Day delivery for Phoenix</h4>
+        <h4 className="hero-text">Prices as low as $10.</h4>
+        <h4 className="hero-text"> Same Day delivery for Phoenix.</h4>
       </div>
 
       <div className="plants-container">

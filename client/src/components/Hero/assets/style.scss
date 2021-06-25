@@ -1,18 +1,75 @@
 @import "../../../style";
 
 .hero-container {
-  height: 90vh;
+  min-height: 60vh;
+
+  @media (min-width: 768px) {
+    height: 90vh;
+  }
 }
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
 .hero-img {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
 }
 
 .hero-text {
   line-height: 35px;
+  font-size: 20px;
 }
 
-.button {
-  position: absolute;
-  margin-top: 20px;
+.hero-btn {
+  background-color: #378549;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 100;
+  border: none;
+  font-family: $appFont;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(124, 124, 124, 0.739);
+}
+.hero-btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #376442;
+}
+
+.hero-head {
+  font-size: 35px;
+  text-align: center;
+  line-height: auto;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+    text-align: left;
+  }
+}
+
+.hero-img-wrapper {
+  text-align: center;
+}
+
+.hero-header-wrapper,
+.hero-img-wrapper {
+  flex-basis: 50%;
+  margin: 20px auto;
 }

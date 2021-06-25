@@ -21,6 +21,11 @@
 .navbar {
   background-color: whitesmoke;
 }
+
+.navbar-nav {
+  flex-direction: row;
+}
+
 .navbar-sticky {
   background: #333;
   position: fixed;
