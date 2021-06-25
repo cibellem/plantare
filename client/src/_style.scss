@@ -1,6 +1,6 @@
 // Typography
 
-$appFont: "PT Sans Caption", sans-serif;
+$appFont: "Hind Vadodara", sans-serif;
 $mainColor: #222222;
 $secondColor: #777777cc;
 $headerColor: #272727e3;
@@ -20,7 +20,11 @@ h1 {
 h2 {
   color: $headerColor;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
+
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
 }
 
 h4 {
