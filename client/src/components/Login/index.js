@@ -1,13 +1,15 @@
 import "./assets/style.scss";
 import * as Yup from "yup";
 import { Formik, Form, Field } from "formik";
-import React, { useCallback, useContext } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { withRouter, Redirect } from "react-router";
 import app from "../../firebase";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Auth";
 
 const LoginComponent = ({ history }) => {
+  const [error, setError] = useState("");
+
   //history it's the browser history
   const handleSubmit = useCallback(
     async (event) => {
@@ -19,7 +21,7 @@ const LoginComponent = ({ history }) => {
           .signInWithEmailAndPassword(email.value, password.value);
         history.push("/");
       } catch (error) {
-        alert(error);
+        setError(error.message);
       }
     },
     [history]
@@ -47,6 +49,10 @@ const LoginComponent = ({ history }) => {
         </div>
       </div>
       <div className="row">
+        <p style={{ fontSize: "12px", textAlign: "center", color: "red" }}>
+          {" "}
+          {error}
+        </p>
         <div className="col-lg-12">
           <Formik
             initialValues={{ email: "", password: "" }}

@@ -26,12 +26,8 @@ const createPaymentIntent = (options) => {
 
 
 
-
-
 const api = {
-  createPaymentIntent,
-
- 
+  createPaymentIntent, 
 };
 
 export default api;

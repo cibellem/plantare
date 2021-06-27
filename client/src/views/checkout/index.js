@@ -27,12 +27,6 @@ function Checkout() {
       .catch();
   }
 
-  // function addtoWishList() {
-  //   console.log("wishlist link working");
-  // }
-
-  const [product, setProduct] = useState();
-
   function removeOne(item, i) {
     let quantity = item.quantity;
 
@@ -43,10 +37,8 @@ function Checkout() {
     API.updateCart(id, productData).then((res) => {
       Axios.get("api/cart").then((res) => {
         let result = res.data;
-
         setCart(result);
         setItems(result);
-
         generateTotal();
       });
     });
@@ -73,9 +65,11 @@ function Checkout() {
       });
     });
   }
+
   function handleChange(e) {
     console.log(e);
   }
+
   function generateTotal() {
     Axios.get("api/cart").then((res) => {
       let result = res.data;

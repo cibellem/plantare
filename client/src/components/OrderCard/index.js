@@ -18,7 +18,6 @@ function OrderCard(props) {
   const [price, setPrice] = useState();
   useEffect(() => {
     setPrice(props.totalPlusTax);
-   
   });
 
   return (
