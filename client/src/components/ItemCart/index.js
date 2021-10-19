@@ -1,8 +1,5 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import "./assets/style.scss";
-import API from "../../Utils/API";
-import { CartContext } from "../../CartContext";
-import { useEffect } from "react";
 
 function ItemCart(props) {
   return (

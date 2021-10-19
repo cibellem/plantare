@@ -5,13 +5,15 @@ import SelectQty from "../Select/index";
 
 //Context and API
 import { CartContext } from "../../CartContext";
+import { ProductContext } from "../../ProductsContext";
 import API from "../../Utils/API";
 
 //Styles
 import "./assets/style.scss";
 
-function PlantCard(props) {
+function PlantCard() {
   const [cart, setCart] = useContext(CartContext);
+  const [products] = useContext(ProductContext);
   const [selected, setSelect] = useState(0);
 
   const arrayOfData = [
@@ -87,7 +89,7 @@ function PlantCard(props) {
       </div>
 
       <div className="plants-container">
-        {props.products.map((item) => (
+        {products.map((item) => (
           <div className="plants-item">
             <img
               key={item._id}

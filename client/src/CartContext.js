@@ -9,7 +9,6 @@ export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
   useEffect(() => {
     Axios.get("api/cart").then((res) => {
-      console.log(res);
       setCart(res.data);
     });
   }, []);
