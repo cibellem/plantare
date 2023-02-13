@@ -12,7 +12,7 @@ This was a solo project where I was responsible for each aspect of development i
 Overall I am pretty happy with the outcome as I was able to learn and implement technologies I had been very interested to work with. <br>
 
 
-Front End : React, Scss and Bootstrap/ <br>
+Front End : React, Context Api, Scss and Bootstrap/ <br>
 Back End : Mongo, Node and Firebase. <br>
 
 ---------------------------------------------
