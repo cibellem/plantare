@@ -2,6 +2,9 @@
   "name": "plantare",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -14,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.6.0",
+    "concurrently": "^4.1.2",
     "enzyme-adapter-react-16": "^1.15.2",
     "nodemon": "^1.18.7"
   },
@@ -22,7 +25,7 @@
     "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.7.0",
     "body-parser": "^1.19.0",
-    "concurrently": "^7.6.0",
+    "concurrently": "^4.1.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
