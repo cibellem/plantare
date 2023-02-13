@@ -44,7 +44,6 @@ app.post("/create-payment-intent", async (req, res) => {
 //Api routes will go here
 app.use(routes);
 //Api routes needs to be defined before this runs
-
 mongoose.connect(
   process.env.MONGODB_URI ||
     "mongodb+srv://cibellem:root@cluster0.bnk4x.mongodb.net/plantare?retryWrites=true&w=majority",

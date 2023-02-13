@@ -3,9 +3,6 @@ import Nav from "../../components/Nav/index";
 import Hero from "../../components/Hero";
 import PlantCard from "../../components/PlantCard";
 
-
-import Api from "../../Utils/API";
-
 function Home() {
 
 
