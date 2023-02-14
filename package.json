@@ -30,6 +30,7 @@
     "formik": "^2.1.4",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.15",
+    "react": "^16.14.0",
     "react-router-dom": "^5.1.2",
     "stripe": "^8.67.0",
     "yup": "^0.29.1"
