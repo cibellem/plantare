@@ -16,7 +16,7 @@
   "devDependencies": {
     "concurrently": "^4.1.2",
     "enzyme-adapter-react-16": "^1.15.2",
-    "nodemon": "^1.18.7"
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "^1.1.2",
