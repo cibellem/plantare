@@ -1,22 +1,24 @@
 import axios from "axios";
 
+const API_BASE_URL = `${process.env.REACT_APP_BE_URL}/api`;
+
 export default {
   getAllProducts: function () {
-    return axios.get("/api/products");
+    return axios.get(`${API_BASE_URL}/products`);
   },
   addToCart: function (productData, id) {
-    return axios.put(`/api/cart/${id}/`, productData);
+    return axios.put(`${API_BASE_URL}/cart/${id}/`, productData);
   },
   removeFromCart: function (id) {
-    return axios.delete(`/api/cart/${id}`);
+    return axios.delete(`${API_BASE_URL}/cart/${id}`);
   },
   updateCart: function (id, productData) {
-    return axios.put(`/api/cart/${id}/`, productData);
+    return axios.put(`${API_BASE_URL}/${id}/`, productData);
   },
   getCart: function () {
-    return axios.get(`/api/cart/`);
+    return axios.get(`${API_BASE_URL}/cart/`);
   },
   getCartById: function (id) {
-    return axios.get(`/api/cart/${id}`);
+    return axios.get(`${API_BASE_URL}/cart/${id}`);
   },
 };
