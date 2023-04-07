@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./assets/style.scss";
-import { AuthContext } from "../../Auth";
-import { CartContext } from "../../CartContext";
+import { AuthContext } from "../../Utils/AuthContext";
+import { CartContext } from "../../Utils/CartContext";
 
 import app from "../../firebase";
 

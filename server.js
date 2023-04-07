@@ -17,7 +17,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// //STRIPE
+
+//STRIPE
 const stripe = require("stripe")(process.env.STRIPE_TEST);
 
 // const calculateOrderAmount = (items) => {

@@ -1,6 +1,5 @@
 import * as firebase from "firebase/app";
 import "firebase/auth";
-require("dotenv").config();
 
 const app = firebase.initializeApp({
   apiKey: "AIzaSyAZBrHCyEUIViTCFDdD0PIoZX8-_KquTQU",

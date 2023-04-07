@@ -4,8 +4,8 @@ import React, { useState, useContext } from "react";
 import SelectQty from "../Select/index";
 
 //Context and API
-import { CartContext } from "../../CartContext";
-import { ProductContext } from "../../ProductsContext";
+import { CartContext } from "../../Utils/CartContext";
+import { ProductContext } from "../../Utils/ProductsContext";
 import API from "../../Utils/API";
 
 //Styles
@@ -95,7 +95,7 @@ function PlantCard() {
               key={item._id}
               className="card-img-top plant-img"
               src={item.image}
-              alt="Plant Image"
+              alt=""
             />
             <div>
               <h6 className="card-title">{item.name}</h6>

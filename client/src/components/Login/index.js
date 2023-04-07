@@ -5,7 +5,7 @@ import React, { useCallback, useContext, useState } from "react";
 import { withRouter, Redirect } from "react-router";
 import app from "../../firebase";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Auth";
+import { AuthContext } from "../../Utils/AuthContext";
 
 const LoginComponent = ({ history }) => {
   const [error, setError] = useState("");

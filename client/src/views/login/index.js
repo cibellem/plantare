@@ -1,7 +1,8 @@
 import React from "react";
-import LoginComponent from "../../components/Login";
-import "./assets/style.scss";
 import { Link } from "react-router-dom";
+import LoginComponent from "../../components/Login";
+
+import "./assets/style.scss";
 
 function Login() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { CartContext } from "../../CartContext";
+import { CartContext } from "../../Utils/CartContext";
 import "./style.scss";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 

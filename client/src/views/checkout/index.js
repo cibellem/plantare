@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import OrderCard from "../../components/OrderCard";
 import ItemCart from "../../components/ItemCart";
-import axios from "axios";
+
 import Nav from "../../components/Nav";
-import "./assets/style.scss";
 import API from "../../Utils/API";
-import { CartContext } from "../../CartContext";
+import { CartContext } from "../../Utils/CartContext";
 import Axios from "axios";
+
+import "./assets/style.scss";
 
 function Checkout() {
   const [items, setItems] = useState([]);
@@ -20,7 +21,6 @@ function Checkout() {
 
     API.removeFromCart(id)
       .then((res) => {
-        console.log(res);
         cart.splice(id, 1);
         setCart([...cart]);
       })
@@ -52,22 +52,16 @@ function Checkout() {
     };
 
     let id = item._id;
-    console.log(productData);
-    API.updateCart(id, productData).then((response) => {
-      console.log(response);
+    API.updateCart(id, productData).then(() => {
       Axios.get("api/cart").then((res) => {
         let result = res.data;
-        console.log(result);
+
         setCart(result);
         setItems(result);
 
         generateTotal();
       });
     });
-  }
-
-  function handleChange(e) {
-    console.log(e);
   }
 
   function generateTotal() {
@@ -126,7 +120,6 @@ function Checkout() {
               removeOne={removeOne}
               items={items}
               deleteItem={deleteItem}
-              handleChange={handleChange}
             />
           </div>
           <div className="col-md-6 m-auto col-sm-12">
